@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  git-initv3:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./SystemInventory.json:/app/SystemInventory.json
+      - ./known_repos.json:/app/known_repos.json
+      - ./plans:/app/plans
+    environment:
+      - PYTHONPATH=/app
+    restart: unless-stopped
