@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: git-initv3
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
